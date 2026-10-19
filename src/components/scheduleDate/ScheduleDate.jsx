@@ -144,21 +144,29 @@ export default function ScheduleDate() {
                     <div className="dateTimeParent">
                       <p className="dialogDate">
                         <span>Date</span> <br />
-                        <div>{ad.date}</div>
+                        <div>{selectedDate?.date}</div>
                       </p>
                       <p className="dialogTime">
                         <span>Time</span> <br />
                         <div>
-                          {ad.from.split(":")[0] + ":" + ad.from.split(":")[1]}-
-                          {ad.to.split(":")[0] + ":" + ad.to.split(":")[1]}
+                          {selectedDate?.from.split(":")[0] +
+                            ":" +
+                            selectedDate?.from.split(":")[1]}
+                          -
+                          {selectedDate?.to.split(":")[0] +
+                            ":" +
+                            selectedDate?.to.split(":")[1]}
                         </div>
                       </p>
                       <p className="dialogTime">
                         <span>Duration</span>
                         <div>
                           {parseInt(
-                            (ad.to.split(":")[0] - ad.from.split(":")[0]) * 60 +
-                              (ad.to.split(":")[1] - ad.from.split(":")[1]),
+                            (selectedDate?.to.split(":")[0] -
+                              selectedDate?.from.split(":")[0]) *
+                              60 +
+                              (selectedDate?.to.split(":")[1] -
+                                selectedDate?.from.split(":")[1]),
                           )}{" "}
                           min
                         </div>

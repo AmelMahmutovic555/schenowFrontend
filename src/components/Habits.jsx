@@ -1,10 +1,5 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import { AuthContext } from "../context/authContext/AuthContext";
 import "./style/Schedule.css";
-import axios from "axios";
 export default function Habits() {
-  const { user, handleLogout } = useContext(AuthContext);
-
   return (
     <article className="home">
       <section className="scheduleParent">
@@ -18,12 +13,6 @@ export default function Habits() {
               <button>Add an Available Date</button>
             </a>
           </div>
-
-          {/* <div>
-          <a href="/book">
-            <button>Book a Schedule Date</button>
-          </a>
-        </div> */}
 
           <div>
             <a href="/book">

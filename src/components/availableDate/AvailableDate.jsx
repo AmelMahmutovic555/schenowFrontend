@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import { AuthContext } from "../../context/authContext/AuthContext";
 
 export default function AvailableDate() {
-  const { message, setMessage, apiUrl } = useContext(AuthContext);
+  const { setMessage, apiUrl } = useContext(AuthContext);
 
   const [meeting, setMeeting] = useState({
     date: "",

@@ -19,7 +19,7 @@ export default function ScheduleDate() {
 
   useEffect(() => {
     handleDates();
-  }, []);
+  }, [handleDates]);
 
   function handleChange(e, id) {
     setUserInfo((prevState) => ({

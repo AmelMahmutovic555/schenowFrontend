@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { AuthContext } from "../context/authContext/AuthContext";
 import "./style/Navbar.css";
 export default function Navbar() {
   return (

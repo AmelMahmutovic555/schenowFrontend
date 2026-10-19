@@ -20,6 +20,7 @@
     rgb(187, 187, 221)
   ); */
   min-height: 100vh;
+  padding-bottom: 3rem;
 }
 
 .articleParentBooking > div:first-of-type {
@@ -285,7 +286,7 @@
   margin-top: 0.5rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
   #parentAvaDates {
     padding-inline: 2rem;
   }
@@ -298,15 +299,13 @@
     margin-inline: 1rem;
   }
 
-  .date,
-  .time {
-    /* font-size: 0.9rem; */
-    margin-top: 0;
-    /* margin-top: 0.5rem; */
-  }
-
   .date {
     margin-top: 1rem;
+  }
+
+  .cardDates {
+    width: 90%;
+    max-width: 90%;
   }
 }
 

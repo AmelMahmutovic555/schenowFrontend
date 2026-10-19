@@ -113,4 +113,9 @@
     /* max-width: fit-content; */
     /* background-color: transparent; */
   }
+
+  .formParent {
+    width: 70%;
+    max-width: 70%;
+  }
 }

@@ -17,9 +17,20 @@ export default function ScheduleDate() {
 
   const ref = useRef(null);
 
+  const handleDates = useCallback(async () => {
+    try {
+      setLoading(true);
+      const res = await axios.get(`${apiUrl}/timeslot/all`);
+      setAvailableDates(res.data);
+    } catch (error) {
+    } finally {
+      setLoading(false);
+    }
+  }, [apiUrl]);
+
   useEffect(() => {
     handleDates();
-  }, []);
+  }, [handleDates]);
 
   function handleChange(e, id) {
     setUserInfo((prevState) => ({
@@ -36,17 +47,6 @@ export default function ScheduleDate() {
   function closeDialog() {
     setSelectedDate(null);
     ref.current?.close();
-  }
-
-  async function handleDates() {
-    try {
-      setLoading(true);
-      const res = await axios.get(`${apiUrl}/timeslot/all`);
-      setAvailableDates(res.data);
-    } catch (error) {
-    } finally {
-      setLoading(false);
-    }
   }
 
   async function handleBooking(e) {
